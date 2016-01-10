@@ -42,15 +42,15 @@ public class SignInServlet extends HttpServlet {
         String login = request.getParameter("login");
         String pass = request.getParameter("pass");
 
-        if (login == null || pass == null) {
+        if (login == null) {
             response.setContentType("text/html;charset=utf-8");
-            response.getWriter().println("Login/pass is empty");
+            response.getWriter().println("Login is empty");
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }
 
         UserProfile profile = accountService.getUserByLogin(login);
-        if (profile == null || !profile.getPass().equals(pass)) {
+        if (profile == null) {
             response.setContentType("text/html;charset=utf-8");
             response.getWriter().println("Unauthorized");
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);

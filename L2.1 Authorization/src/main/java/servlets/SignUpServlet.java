@@ -41,9 +41,9 @@ public class SignUpServlet extends HttpServlet {
         String login = request.getParameter("login");
         String pass = request.getParameter("pass");
 
-        if (login == null || pass == null) {
+        if (login == null) {
             response.setContentType("text/html;charset=utf-8");
-            response.getWriter().println("Login/pass is empty");
+            response.getWriter().println("Login is empty");
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }
@@ -56,7 +56,7 @@ public class SignUpServlet extends HttpServlet {
             return;
         }
 
-        UserProfile newUserProfile = new UserProfile(login, pass, login);
+        UserProfile newUserProfile = new UserProfile(login);
         accountService.addNewUser(newUserProfile);
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().println("User: " + newUserProfile.getLogin() + " registered successfully!");
