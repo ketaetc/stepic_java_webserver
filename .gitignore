@@ -1,0 +1,6 @@
+.idea
+target
+*.jar
+*.bat
+*.sh
+*.iml
