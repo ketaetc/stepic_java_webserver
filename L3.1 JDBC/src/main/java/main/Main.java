@@ -3,7 +3,6 @@ package main;
 
 import accounts.AccountService;
 import accounts.UserProfile;
-import dbService.DBException;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
@@ -21,8 +20,8 @@ public class Main {
 
         AccountService accountService = new AccountService();
 
-        accountService.addNewUser(new UserProfile("admin"));
-        accountService.addNewUser(new UserProfile("test"));
+//        accountService.addNewUser(new UserProfile("admin"));
+//        accountService.addNewUser(new UserProfile("test"));
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(new SignUpServlet(accountService)), "/signup");
@@ -37,14 +36,10 @@ public class Main {
         Server server = new Server(8080);
         server.setHandler(handlers);
 
-        try {
-            server.start();
-            System.out.println("Server started");
+        server.start();
+        System.out.println("Server started");
 
-            server.join();
+        server.join();
 
-        } catch (DBException e) {
-            e.printStackTrace();
-        }
     }
 }

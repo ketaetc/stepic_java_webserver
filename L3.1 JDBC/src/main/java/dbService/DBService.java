@@ -2,6 +2,7 @@ package dbService;
 
 import dbService.dao.UsersDAO;
 import dbService.dataSets.UsersDataSet;
+import org.h2.engine.Session;
 import org.h2.jdbcx.JdbcDataSource;
 
 import java.sql.Connection;
@@ -9,25 +10,29 @@ import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 /**
- * @author v.chibrikov
- *         <p>
- *         Пример кода для курса на https://stepic.org/
- *         <p>
- *         Описание курса и лицензия: https://github.com/vitaly-chibrikov/stepic_java_webserver
+ * edited by ketaetc
  */
 public class DBService {
     private final Connection connection;
 
     public DBService() {
         this.connection = getH2Connection();
+        UsersDAO dao = new UsersDAO(connection);
+        try {
+            dao.dropTable();
+            dao.createTable();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public UsersDataSet getUser(long id) throws DBException {
         try {
             return (new UsersDAO(connection).get(id));
         } catch (SQLException e) {
-            throw new DBException(e);
+            e.printStackTrace();
         }
+        return null;
     }
 
     public long addUser(String name, String password) throws DBException {
@@ -39,19 +44,21 @@ public class DBService {
             connection.commit();
             return dao.getUserId(name);
         } catch (SQLException e) {
-            try {
-                connection.rollback();
-            } catch (SQLException ignore) {
-                ignore.printStackTrace();
-            }
-            throw new DBException(e);
-        } finally {
-            try {
-                connection.setAutoCommit(true);
-            } catch (SQLException ignore) {
-                ignore.printStackTrace();
-            }
+            e.printStackTrace();
         }
+        return 0;
+    }
+
+    public UsersDataSet getUserByName(String name) {
+        try {
+            UsersDAO dao = new UsersDAO(connection);
+            long id = dao.getUserId(name);
+            UsersDataSet usD = dao.get(id);
+            return usD;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void cleanUp() throws DBException {
@@ -101,9 +108,6 @@ public class DBService {
 
     public static Connection getH2Connection() {
         try {
-//            String url = "jdbc:h2:./h2db";
-//            String name = "tully";
-//            String pass = "tully";
 
             String url = "jdbc:h2:~/IdeaProjects/stepic_java_webserver/L3.1 JDBC/h2db";
             String name = "test";

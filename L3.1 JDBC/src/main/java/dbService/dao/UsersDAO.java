@@ -7,11 +7,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * @author v.chibrikov
- *         <p>
- *         Пример кода для курса на https://stepic.org/
- *         <p>
- *         Описание курса и лицензия: https://github.com/vitaly-chibrikov/stepic_java_webserver
+ * edited by ketaetc
  */
 public class UsersDAO {
 
@@ -29,7 +25,6 @@ public class UsersDAO {
     }
 
     public long getUserId(String name) throws SQLException {
-//        return executor.execQuery("select * from users where user_name='" + name + "'", result -> {
         return executor.execQuery("select * from users where login='" + name + "'", result -> {
             result.next();
             return result.getLong(1);
@@ -37,12 +32,10 @@ public class UsersDAO {
     }
 
     public void insertUser(String name, String password) throws SQLException {
-//        executor.execUpdate("insert into users (user_name) values ('" + name + "')");
         executor.execUpdate("insert into users (login, password) values ('" + name + "', '" + password + "')");
     }
 
     public void createTable() throws SQLException {
-//        executor.execUpdate("create table if not exists users (id bigint auto_increment, user_name varchar(256), primary key (id))");
         executor.execUpdate("create table if not exists users (id bigint auto_increment, login varchar(256), password varchar(256), primary key (id))");
     }
 
