@@ -109,7 +109,8 @@ public class DBService {
     public static Connection getH2Connection() {
         try {
 
-            String url = "jdbc:h2:~/IdeaProjects/stepic_java_webserver/L3.1 JDBC/h2db";
+//            String url = "jdbc:h2:~/IdeaProjects/stepic_java_webserver/L3.1 JDBC/h2db";
+            String url = "jdbc:h2:./h2db";
             String name = "test";
             String pass = "test";
 
