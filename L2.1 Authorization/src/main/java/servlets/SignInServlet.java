@@ -57,7 +57,7 @@ public class SignInServlet extends HttpServlet {
             return;
         } else {
             response.setContentType("text/html;charset=utf-8");
-            response.getWriter().println("Authorized");
+            response.getWriter().println("Authorized: " + login);
             response.setStatus(HttpServletResponse.SC_OK);
             return;
         }

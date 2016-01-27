@@ -33,7 +33,8 @@ public class MirrorServlet extends HttpServlet {
 
         pageVariables.put("key", param == null ? "" : param);
 
-        response.getWriter().println(PageGenerator.instance().getPage("mirror.html", pageVariables));
+//        response.getWriter().println(PageGenerator.instance().getPage("mirror.html", pageVariables));
+        response.getWriter().println(param);
     }
 
     private static Map<String, Object> createPageVariablesMap(HttpServletRequest request) {
