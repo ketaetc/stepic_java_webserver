@@ -1,0 +1,30 @@
+[02-29 00:57:51,766, 768] example.Main Starting at http://127.0.0.1:8080
+[02-29 00:57:52,029, 1031] example.Main Server started
+[02-29 01:02:42,430, 291432] servlets.HomePageServlet Limit: 1. Count 0
+[02-29 01:02:42,431, 291433] servlets.HomePageServlet User pass
+[02-29 01:02:43,965, 292967] servlets.HomePageServlet Limit: 1. Count 1
+[02-29 01:02:43,965, 292967] servlets.HomePageServlet User were rejected
+[02-29 01:02:44,852, 293854] servlets.HomePageServlet Limit: 1. Count 1
+[02-29 01:02:44,852, 293854] servlets.HomePageServlet User were rejected
+[02-29 01:02:50,291, 299293] servlets.HomePageServlet Limit: 10. Count 1
+[02-29 01:02:50,291, 299293] servlets.HomePageServlet User pass
+[02-29 01:02:50,887, 299889] servlets.HomePageServlet Limit: 10. Count 2
+[02-29 01:02:50,887, 299889] servlets.HomePageServlet User pass
+[02-29 01:02:51,404, 300406] servlets.HomePageServlet Limit: 10. Count 3
+[02-29 01:02:51,404, 300406] servlets.HomePageServlet User pass
+[02-29 01:02:51,625, 300627] servlets.HomePageServlet Limit: 10. Count 4
+[02-29 01:02:51,626, 300628] servlets.HomePageServlet User pass
+[02-29 01:02:51,803, 300805] servlets.HomePageServlet Limit: 10. Count 5
+[02-29 01:02:51,804, 300806] servlets.HomePageServlet User pass
+[02-29 01:02:51,969, 300971] servlets.HomePageServlet Limit: 10. Count 6
+[02-29 01:02:51,969, 300971] servlets.HomePageServlet User pass
+[02-29 01:03:00,231, 309233] servlets.HomePageServlet Limit: 10. Count 7
+[02-29 01:03:00,231, 309233] servlets.HomePageServlet User pass
+[02-29 01:03:05,471, 314473] servlets.HomePageServlet Limit: 10. Count 8
+[02-29 01:03:05,471, 314473] servlets.HomePageServlet User pass
+[02-29 01:03:05,617, 314619] servlets.HomePageServlet Limit: 10. Count 9
+[02-29 01:03:05,617, 314619] servlets.HomePageServlet User pass
+[02-29 01:03:05,926, 314928] servlets.HomePageServlet Limit: 10. Count 10
+[02-29 01:03:05,926, 314928] servlets.HomePageServlet User were rejected
+[02-29 01:03:06,096, 315098] servlets.HomePageServlet Limit: 10. Count 10
+[02-29 01:03:06,097, 315099] servlets.HomePageServlet User were rejected

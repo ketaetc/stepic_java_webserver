@@ -1,0 +1,3 @@
+[02-29 02:00:31,830, 517] example.Main Starting at http://127.0.0.1:8080
+[02-29 02:00:31,982, 669] example.Main Server started
+[02-29 02:00:32,433, 1120] servlets.AdminPageServlet Limit: 10. Count 0
