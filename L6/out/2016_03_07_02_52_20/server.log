@@ -1,4 +1,0 @@
-[03-07 02:52:20,409, 575] example.Main Starting at http://127.0.0.1:8080
-[03-07 02:52:20,568, 734] example.Main Server started
-[03-07 02:52:21,113, 1279] servlets.ResourcesPageServlet Path: resource.xml
-[03-07 02:52:21,121, 1287] servlets.ResourcesPageServlet Name: . Age 0
