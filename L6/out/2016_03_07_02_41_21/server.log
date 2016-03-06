@@ -1,0 +1,15 @@
+[03-07 02:41:21,988, 930] example.Main Starting at http://127.0.0.1:8080
+[03-07 02:41:22,289, 1231] example.Main Server started
+[03-07 02:41:56,295, 35237] servlets.ResourcesPageServlet Path: pom.xml
+[03-07 02:43:40,815, 139757] servlets.ResourcesPageServlet Path: /pom.xml
+[03-07 02:43:51,279, 150221] servlets.ResourcesPageServlet Path parameter is empty
+[03-07 02:43:58,416, 157358] servlets.ResourcesPageServlet Path: dd
+[03-07 02:44:11,893, 170835] servlets.ResourcesPageServlet Path: ./pom.xml
+[03-07 02:45:40,391, 259333] servlets.ResourcesPageServlet Path: "~/IdeaProjects/stepic_java_webserver/L5.1 Tests/pom.xml"
+[03-07 02:45:54,636, 273578] servlets.ResourcesPageServlet Path: "~/IdeaProjects/stepic_java_webserver/L5.1 Tests/pom.xml"
+[03-07 02:47:04,514, 343456] servlets.ResourcesPageServlet Path: /cfg/log4j2.xml
+[03-07 02:47:11,775, 350717] servlets.ResourcesPageServlet Path: cfg/log4j2.xml
+[03-07 02:47:20,145, 359087] servlets.ResourcesPageServlet Path: 'cfg/log4j2.xml'
+[03-07 02:47:26,270, 365212] servlets.ResourcesPageServlet Path: ./cfg/log4j2.xml
+[03-07 02:47:31,437, 370379] servlets.ResourcesPageServlet Path: cfg/log4j2.xml
+[03-07 02:47:36,370, 375312] servlets.ResourcesPageServlet Path: cfg/log4j2.xml
