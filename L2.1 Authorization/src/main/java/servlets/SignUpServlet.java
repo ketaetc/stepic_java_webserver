@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author ketaetc
+ * edited by ketaetc
  */
 public class SignUpServlet extends HttpServlet {
     private final AccountService accountService;

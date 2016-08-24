@@ -49,7 +49,6 @@ public class Main {
                 String outputLine;
                 int lineIndex = 0;
                 while ((inputLine = in.readLine()) != null) {
-                    //System.out.println("Message from client: " + inputLine);
                     outputLine = inputLine;
                     out.println(outputLine);
                     ++lineIndex;

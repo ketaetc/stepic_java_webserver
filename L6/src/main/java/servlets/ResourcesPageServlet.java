@@ -51,16 +51,5 @@ public class ResourcesPageServlet extends HttpServlet {
             response.getWriter().println("Path parameter is empty");
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
         }
-
-//        if (limit > count) {
-//            logger.info("User pass");
-//            resources.addNewUser();
-//            response.getWriter().println("Hello, world!");
-//            response.setStatus(HttpServletResponse.SC_OK);
-//        } else {
-//            logger.info("User were rejected");
-//            response.getWriter().println("Server is closed for maintenance!");
-//            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-//        }
     }
 }

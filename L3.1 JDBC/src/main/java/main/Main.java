@@ -20,9 +20,6 @@ public class Main {
 
         AccountService accountService = new AccountService();
 
-//        accountService.addNewUser(new UserProfile("admin"));
-//        accountService.addNewUser(new UserProfile("test"));
-
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(new SignUpServlet(accountService)), "/signup");
         context.addServlet(new ServletHolder(new SignInServlet(accountService)), "/signin");

@@ -1,11 +1,7 @@
 package accounts;
 
 /**
- * @author v.chibrikov
- *         <p>
- *         Пример кода для курса на https://stepic.org/
- *         <p>
- *         Описание курса и лицензия: https://github.com/vitaly-chibrikov/stepic_java_webserver
+ * edited by ketaetc
  */
 public class UserProfile {
     private final String login;
